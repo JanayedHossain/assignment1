@@ -53,3 +53,23 @@ function validateUsername(name) {
     return "Available";
 }
 
+
+// Question 4
+
+function getCngFare(distance, isNight = false, waiting = 0) {
+
+    let fare = 50;
+
+    if (distance > 2) {
+        fare = fare + (distance - 2) * 15;
+    }
+
+    fare = fare + waiting * 2;
+
+    if (isNight) {
+        fare = fare * 1.20;
+    }
+
+    return fare;
+}
+
